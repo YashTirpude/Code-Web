@@ -1,38 +1,279 @@
-.App {
-  text-align: center;
+.homePageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #eee;
+
+  background: url(../public/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formWrapper {
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border: solid cyan;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+}
+footer h4 {
+  display: flex;
+
+  align-items: center;
+  margin: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer a {
+  color: cyan;
+  transition: all 0.3s ease-in-out;
+}
+
+footer img {
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+}
+.linkedin-logo {
+  height: 35px;
+  width: 35px;
+  margin-bottom: 10px;
+}
+
+.inputGroup {
   display: flex;
   flex-direction: column;
+}
+
+mainLabel {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.homepage-logo-container {
+  display: flex;
+  border-bottom: 1px solid cyan;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.homepage-logo-container h3 {
+  font-size: 35px;
+}
+
+.homePageLogo {
+  height: 75px;
+  margin-bottom: 25px;
+  animation: rotate 5s linear infinite;
+  display: flex;
+}
+
+.inputBox {
+  padding: 10px;
   color: white;
+  outline: none;
+  border: none;
+  border-bottom: solid cyan 1px;
+  margin-bottom: 14px;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.joinBtn,
+.leaveRoom {
+  background: cyan;
+  width: 100px;
+  margin-left: auto;
+}
+
+.joinBtn:hover,
+.leaveRoom:hover {
+  box-shadow: 0 0 15px cyan;
+}
+
+.createInfo {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.createNewBtn {
+  color: cyan;
+  text-decoration: none;
+  border-bottom: 1px solid cyan;
+  transition: all 0.3s ease-in-out;
+}
+
+.createNewBtn:hover,
+footer a:hover {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+  border-color: cyan;
+}
+
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+
+.sidePanel {
+  background: transparent;
+
+  padding: 16px;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.TopBar {
+  flex: 1;
+}
+
+.TopBar h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.clientsList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.userName {
+  margin-top: 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+
+  font-size: 20px;
+}
+
+.logoImage {
+  height: 80px;
+  width: 80px;
+}
+
+.leaveRoom {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.editor {
+  height: 50vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.result-output {
+  width: 100%;
+  margin-top: 10px;
+
+  display: flex;
+  background-color: white;
+}
+
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+
+  text-wrap: wrap;
+  width: 300px;
+  flex-direction: column;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  transition: 0.5s ease-in-out;
+}
+
+.editor-container.collapsed {
+  flex-grow: 0;
+  width: 200px;
+}
+
+.CodeMirror {
+  height: 100% !important;
+}
+
+.codeMirror {
+  flex-grow: 1;
+  word-wrap: break-word;
+  overflow: auto !important;
+}
+
+.editor-header {
+  background: #1c1e29;
+  color: white;
+  font-weight: 700;
+  margin-top: 10px;
+  border-bottom: solid rgb(91, 90, 90) 1px;
+}
+
+.title {
+  padding: 10px;
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.output-title {
+  display: flex;
+  background: black;
+  padding: 5px;
+}
+
+.fullscreen-btn {
+  background-color: #282a36;
+  color: cyan;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.expand-collapse-btn {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
